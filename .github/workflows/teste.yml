@@ -36,7 +36,12 @@ jobs:
         run: flutter pub get
     
       - name: Rodar os testes
-        run: flutter test
+        uses: reactivecircus/android-emulator-runner@v1
+        with:
+          api-level: 29
+          script: flutter test integration_test
+
+        #run: flutter test
         
   build:
     needs: test
