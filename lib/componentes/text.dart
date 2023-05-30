@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget Texto(String text) {
+Widget defaultTexto(String text, TextStyle? textStyle) {
   return Text(
     text,
-    style: TextStyle(fontSize: 16),
+    style: const TextStyle(fontFamily: 'Rubik').merge(textStyle),
   );
 }
