@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-Text defaultText({String text = "", TextStyle? textStyle}) {
-  return Text(
-    text,
-    style: const TextStyle(fontFamily: 'Rubik')
-        .merge(textStyle ?? const TextStyle()),
-    
-  );
+class CustomText extends StatelessWidget {
+  final String text;
+  final TextStyle? style;
+  final TextAlign? textAlign;
+
+  const CustomText(this.text, {Key? key, this.style, this.textAlign})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: style,
+      textAlign: textAlign,
+    );
+  }
 }

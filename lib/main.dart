@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:agenda/componentes/navigation_bar.dart';
 import 'package:agenda/componentes/text.dart';
+import 'package:agenda/componentes/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,23 +37,24 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.lightBlueAccent,
-          title: defaultText(
-              text: "Agenda Simples",
-              textStyle: const TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.white))),
-      bottomNavigationBar: BarraNavegacao(
-        indexPageSelecionada: indexPageSelecionada,
-        setState: (int index) {
-          setState(() {
-            indexPageSelecionada = index;
-          });
-        },
-      ),
-      body: Container(),
-    );
+        appBar: AppBar(
+            backgroundColor: Colors.lightBlueAccent,
+            title: const CustomText("Agenda Simples",
+                style: TextStyle(fontWeight: FontWeight.bold))),
+        bottomNavigationBar: BarraNavegacao(
+          indexPageSelecionada: indexPageSelecionada,
+          setState: (int index) {
+            setState(() {
+              indexPageSelecionada = index;
+            });
+          },
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [TarefaCard()]),
+        ));
   }
 }
-
-void changeIndexNavigation() {}
