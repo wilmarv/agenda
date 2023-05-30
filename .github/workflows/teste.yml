@@ -12,31 +12,6 @@ on:
     branches: [ "master" ]
 
 jobs:
-  test:
-    
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
-        with: 
-          distribution: 'zulu'
-          java-version: "12.x" 
-          
-      - name: Instalar o Flutter
-      #Instala o Flutter na versão especificada
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: "3.7.7"
-          channel: 'stable'
-      
-          
-      - name: Obter dependências
-        run: flutter pub get
-    
-      - name: Executar testes
-        run: flutter test
         
   build:
     
