@@ -1,7 +1,9 @@
+import 'package:agenda/view/adicionar_tarefa.dart';
+import 'package:agenda/view/pendentes.dart';
+import 'package:agenda/view/todas.dart';
 import 'package:flutter/material.dart';
 import 'package:agenda/componentes/navigation_bar.dart';
 import 'package:agenda/componentes/text.dart';
-import 'package:agenda/componentes/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +34,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int indexPageSelecionada = 0;
+  int indexPageSelecionada = 1;
+
+  void navegaPelasPaginas(int index) {
+    setState(() {
+      indexPageSelecionada = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,19 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
             title: const CustomText("Agenda Simples",
                 style: TextStyle(fontWeight: FontWeight.bold))),
         bottomNavigationBar: BarraNavegacao(
-          indexPageSelecionada: indexPageSelecionada,
-          setState: (int index) {
-            setState(() {
-              indexPageSelecionada = index;
-            });
-          },
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [TarefaCard()]),
-        ));
+            indexPageSelecionada: indexPageSelecionada,
+            setState: navegaPelasPaginas),
+        body: [
+          const TodasAsTarefas(),
+          const Pendentes(),
+          AdicionarTarefa(setState: navegaPelasPaginas),
+        ][indexPageSelecionada]);
   }
 }
