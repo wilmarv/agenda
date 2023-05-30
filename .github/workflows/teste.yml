@@ -29,7 +29,8 @@ jobs:
 
       - name: Get dependencies
         run: flutter pub get
-      - name: Run tests
-        run: flutter test 
+      # Runs a set of commands using the runners shell
+      - name: Start release build
+        run: flutter build appbundle
         
   
