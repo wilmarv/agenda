@@ -13,11 +13,11 @@ on:
 
 jobs:
   test:
-    # Define em qual servidor o sistema será executado, pode ser 'macos-latest'
+    
     runs-on: ubuntu-latest
 
     steps:
-    # Primeiro vai verificar o repositório que o código esta
+
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with: 
@@ -39,7 +39,7 @@ jobs:
         run: flutter test
         
   build:
-    #needs: test
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -51,7 +51,7 @@ jobs:
           java-version: "12.x" 
           
       - name: Instalar o Flutter
-      #Instala o Flutter na versão que será definida 
+      
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.7.7"
@@ -61,6 +61,6 @@ jobs:
         run: flutter pub get
       
       - name: Criando a build
-        run: flutter build apk --split-per-abi
+        run: flutter build apk 
         
   
