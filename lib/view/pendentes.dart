@@ -1,6 +1,6 @@
 import 'package:agenda/componentes/card.dart';
 import 'package:agenda/componentes/text.dart';
-import 'package:agenda/controller/task_store.dart';
+import 'package:agenda/service/task_store.dart';
 import 'package:agenda/model/tarefa.dart';
 import "package:flutter/material.dart";
 
