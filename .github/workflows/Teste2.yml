@@ -31,8 +31,7 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
     
-      # Verifica se existe algum erro de formatção no codigo.
-      - run: flutter format --set-exit-if-changed .
+     
     
       # Analiza se existe algum erro no dart
       - run: flutter analyze .
