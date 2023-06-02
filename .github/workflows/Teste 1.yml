@@ -28,7 +28,7 @@ jobs:
         run: flutter pub get
         
       - name: Run tests
-        run: flutter test --coverage=./coverage
+        run: flutter test --coverage
            
   build:
     needs: test
@@ -56,6 +56,6 @@ jobs:
         
       - uses: actions/upload-artifact@v3
         with:
-         name: Relatório
+         name: APK
          path: build/app/outputs/apk/release/app-release.apk
 
