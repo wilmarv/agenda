@@ -28,18 +28,8 @@ jobs:
         run: flutter pub get
         
       - name: Run tests
-        run: flutter test
-         
-  report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: dorny/test-reporter@v1
-        with:
-          artifact: test-results            # artifact name
-          name: RELATORIO                  # Name of the check run which will be created
-          path: ''                     # Path to test results (inside artifact .zip)
-          reporter: flutter-json 
-          
+        run: flutter test --coverage=./coverage
+           
   build:
     needs: test
     runs-on: ubuntu-latest
