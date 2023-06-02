@@ -1,17 +1,31 @@
+[![CI](https://github.com/wilmarv/agenda/actions/workflows/teste.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/teste.yml)
 
-# agenda
+# C214 - Agenda Simples
 
-A new Flutter project.
+Este projeto consiste em uma aplicação simples de um registrador de tarefas. O objetivo é permitir que os usuários possam registrar tarefas pendentes e tarefas realizadas.
 
-## Getting Started
+O escopo do projeto é voltado para apresentar os conceitos aprendidos durante o curso C214 - Engenharia de Software. Trata-se de um projeto simples, com o intuito de exemplificar e aplicar os conceitos abordados no curso.
 
-This project is a starting point for a Flutter application.
+## Iniciando Projeto
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Clonar o repo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+git clone https://github.com/wilmarv/agenda
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Instalar as dependências
+
+```
+flutter pub get
+```
+
+### 3. Executar o projeto
+```
+flutter run
+```
+
+### 4. Executar testes
+```
+flutter test
+```
