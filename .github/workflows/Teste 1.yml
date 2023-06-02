@@ -28,7 +28,7 @@ jobs:
         run: flutter pub get
         
       - name: Run tests
-        run: flutter test --coverage
+        run: flutter test --coverage ./coverage
            
   build:
     needs: test
