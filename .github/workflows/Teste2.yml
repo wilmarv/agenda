@@ -1,0 +1,50 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Teste 2
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    # Irá rodar uma maquina virtual usando ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: "12.x"
+       
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.7.7"
+          channel: 'stable'
+          
+      - name: Get dependencies
+        run: flutter pub get
+    
+      # Verifica se existe algum erro de formatção no codigo.
+      - run: flutter format --set-exit-if-changed .
+    
+      # Analiza se existe algum erro no dart
+      - run: flutter analyze .
+    
+      # Roda os testes 
+      - run: flutter test
+    
+      # Build apk.
+      - run: flutter build apk
+    
+    # Atualiza o artifacs
+      - uses: actions/upload-artifact@v1
+        with:
+          name: release-apk
+          path: build/app/outputs/apk/release/app-release.apk
