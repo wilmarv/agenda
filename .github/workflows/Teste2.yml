@@ -37,7 +37,7 @@ jobs:
       - run: flutter analyze .
     
       # Roda os testes 
-      - run: flutter test
+      - run: flutter test --coverage
     
       # Build apk.
       - run: flutter build apk
