@@ -1,4 +1,4 @@
-[![CI](https://github.com/wilmarv/agenda/actions/workflows/teste.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/teste.yml)
+#[![CI](https://github.com/wilmarv/agenda/actions/workflows/teste.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/teste.yml)
 # agenda
 
 A new Flutter project.
