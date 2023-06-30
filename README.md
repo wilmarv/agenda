@@ -1,4 +1,4 @@
-[![CI](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml)
+[![Main CI](https://github.com/wilmarv/agenda/actions/workflows/integracao_continua.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/integracao_continua.yml)
 
 # C214 - Agenda Simples
 
