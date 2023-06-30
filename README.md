@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [![CI](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml)
-=======
-[![CI](https://github.com/wilmarv/agenda/actions/workflows/teste.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/teste.yml)
->>>>>>> 44a15ab (Update README.md)
-=======
-[![CI](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml/badge.svg)](https://github.com/wilmarv/agenda/actions/workflows/Teste%201.yml)
->>>>>>> b45ffca (Update README.md)
 
 # C214 - Agenda Simples
 
